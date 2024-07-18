@@ -193,17 +193,23 @@ public final class Hook {
 
     public static final class SdkInitData {
          private final String baseUrl;
+         private final String ledgerApiPath;
          private final HTTPClient client;
          
-         public SdkInitData(String baseUrl, HTTPClient client) {
+         public SdkInitData(String baseUrl, String ledgerApiPath, HTTPClient client) {
              this.baseUrl = baseUrl;
+             this.ledgerApiPath = ledgerApiPath;
              this.client = client;
          }
          
          public String baseUrl() {
              return baseUrl;
          }
-         
+
+         public String ledgerApiPath() {
+             return ledgerApiPath;
+         }
+
          public HTTPClient client() {
              return client;
          }

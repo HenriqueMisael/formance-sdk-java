@@ -101,7 +101,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.CreateTransactionsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions/batch",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions/batch",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -217,7 +217,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.AddMetadataOnTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions/{txid}/metadata",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions/{txid}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -319,7 +319,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.AddMetadataToAccountRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/accounts/{address}/metadata",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/accounts/{address}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -424,7 +424,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.CountAccountsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/accounts",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/accounts",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "HEAD");
@@ -527,7 +527,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.CountTransactionsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "HEAD");
@@ -630,7 +630,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.CreateTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -751,7 +751,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.GetAccountRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/accounts/{address}",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/accounts/{address}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -859,7 +859,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.GetBalancesRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/balances",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/balances",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -972,7 +972,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.GetBalancesAggregatedRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/aggregate/balances",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/aggregate/balances",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1082,7 +1082,7 @@ public class Ledger implements
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
                 _baseUrl,
-                "/api/ledger/_info");
+                this.sdkConfiguration.ledgerApiPath + "_info");
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
         _req.addHeader("Accept", "application/json")
@@ -1189,7 +1189,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.GetLedgerInfoRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/_info",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/_info",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1297,7 +1297,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.GetMappingRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/mapping",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/mapping",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1405,7 +1405,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.GetTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions/{txid}",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions/{txid}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1515,7 +1515,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.ListAccountsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/accounts",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/accounts",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1630,7 +1630,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.ListLogsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/logs",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/logs",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1745,7 +1745,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.ListTransactionsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1862,7 +1862,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.ReadStatsRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/stats",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/stats",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -1970,7 +1970,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.RevertTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/transactions/{txid}/revert",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/transactions/{txid}/revert",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -2091,7 +2091,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.RunScriptRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/script",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/script",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -2206,7 +2206,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.UpdateMappingRequest.class,
                 _baseUrl,
-                "/api/ledger/{ledger}/mapping",
+                this.sdkConfiguration.ledgerApiPath + "{ledger}/mapping",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "PUT");
@@ -2322,7 +2322,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2AddMetadataOnTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions/{id}/metadata",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions/{id}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -2430,7 +2430,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2AddMetadataToAccountRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/accounts/{address}/metadata",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/accounts/{address}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -2541,7 +2541,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2CountAccountsRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/accounts",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/accounts",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "HEAD");
@@ -2649,7 +2649,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2CountTransactionsRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "HEAD");
@@ -2757,7 +2757,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2CreateBulkRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/_bulk",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/_bulk",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -2870,7 +2870,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2CreateLedgerRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -2972,7 +2972,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2CreateTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -3096,7 +3096,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2DeleteAccountMetadataRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/accounts/{address}/metadata/{key}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/accounts/{address}/metadata/{key}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "DELETE");
@@ -3187,7 +3187,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2DeleteLedgerMetadataRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/metadata/{key}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/metadata/{key}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "DELETE");
@@ -3286,7 +3286,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2DeleteTransactionMetadataRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions/{id}/metadata/{key}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions/{id}/metadata/{key}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "DELETE");
@@ -3383,7 +3383,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2GetAccountRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/accounts/{address}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/accounts/{address}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -3496,7 +3496,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2GetBalancesAggregatedRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/aggregate/balances",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/aggregate/balances",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -3611,7 +3611,7 @@ public class Ledger implements
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
                 _baseUrl,
-                "/api/ledger/v2/_info");
+                this.sdkConfiguration.ledgerApiPath + "v2/_info");
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
         _req.addHeader("Accept", "application/json")
@@ -3718,7 +3718,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2GetLedgerRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -3826,7 +3826,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2GetLedgerInfoRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/_info",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/_info",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -3934,7 +3934,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2GetTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions/{id}",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions/{id}",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -4047,7 +4047,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2GetVolumesWithBalancesRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/volumes",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/volumes",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -4167,7 +4167,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2ListAccountsRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/accounts",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/accounts",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -4284,7 +4284,7 @@ public class Ledger implements
         String _baseUrl = this.sdkConfiguration.serverUrl;
         String _url = Utils.generateURL(
                 _baseUrl,
-                "/api/ledger/v2");
+                this.sdkConfiguration.ledgerApiPath + "v2");
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
         _req.addHeader("Accept", "application/json")
@@ -4398,7 +4398,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2ListLogsRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/logs",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/logs",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -4518,7 +4518,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2ListTransactionsRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -4640,7 +4640,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2ReadStatsRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/stats",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/stats",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "GET");
@@ -4748,7 +4748,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2RevertTransactionRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/transactions/{id}/revert",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/transactions/{id}/revert",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "POST");
@@ -4861,7 +4861,7 @@ public class Ledger implements
         String _url = Utils.generateURL(
                 com.formance.formance_sdk.models.operations.V2UpdateLedgerMetadataRequest.class,
                 _baseUrl,
-                "/api/ledger/v2/{ledger}/metadata",
+                this.sdkConfiguration.ledgerApiPath + "v2/{ledger}/metadata",
                 request, null);
         
         HTTPRequest _req = new HTTPRequest(_url, "PUT");

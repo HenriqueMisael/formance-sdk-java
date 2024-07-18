@@ -172,6 +172,11 @@ public class SDK implements
             this.sdkConfiguration.serverUrl = com.formance.formance_sdk.utils.Utils.templateUrl(serverUrl, params);
             return this;
         }
+
+        public Builder ledgerApiPath(String ledgerApiPath) {
+            this.sdkConfiguration.ledgerApiPath = ledgerApiPath;
+            return this;
+        }
         
         /**
          * Overrides the default server by index.

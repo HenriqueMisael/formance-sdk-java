@@ -18,6 +18,7 @@ class SDKConfiguration {
     }
     public HTTPClient defaultClient;
       public String serverUrl;
+      public String ledgerApiPath;
     public int serverIdx = 0;
     public String language = "java";
     public String openapiDocVersion = "v2.0.0-rc.33";
@@ -41,8 +42,9 @@ class SDKConfiguration {
     public void initialize() {
         com.formance.formance_sdk.hooks.SDKHooks.initialize(_hooks);
         // apply the sdk init hook immediately
-        SdkInitData data = _hooks.sdkInit(new SdkInitData(serverUrl, defaultClient));
+        SdkInitData data = _hooks.sdkInit(new SdkInitData(serverUrl, ledgerApiPath, defaultClient));
         this.serverUrl = data.baseUrl();
+        this.ledgerApiPath = data.ledgerApiPath();
         this.defaultClient = data.client();
     }
 
